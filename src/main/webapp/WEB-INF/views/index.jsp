@@ -9,7 +9,7 @@
             <!-- 왼쪽 고정 사이드바 -->
             <jsp:include page="common/sidebar.jsp" />
             <div>
-                안녕하세요
+                <안녕하세요></안녕하세요>
             </div>
             <!-- 오른쪽 상단바 + 콘텐츠 -->
             <div class="main-area">
