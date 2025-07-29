@@ -114,7 +114,6 @@ git clone https://github.com/didwlwd/diamelo
 | DiameloApplication.java | 애플리케이션 진입점 (SpringBootApplication)  |
 | ServletInitializer.java | WAR 배포용 서블릿 초기화 클래스                 |
 <br/>
-<br/>
 
 ### src/main/resources
 | 폴더/파일                    | 설명                          |
@@ -123,7 +122,6 @@ git clone https://github.com/didwlwd/diamelo
 | static/                | 정적 리소스 (JS, CSS 등)          |
 | application.properties | 전체 애플리케이션 설정 (DB, 로깅, 보안 등) |
 | index.html             | 정적 HTML 메인 페이지 (또는 리디렉션용)   |
-<br/>
 <br/>
 
 ### src/main/webapp
@@ -137,15 +135,144 @@ git clone https://github.com/didwlwd/diamelo
 | index.jsp             | 프로젝트 메인 JSP           |
 <br/>
 
+## 기능 명세
+### BoardController
+| 메서드  | 엔드포인트           | 설명                                 |
+| ---- | --------------- | ---------------------------------- |
+| GET  | /board.erp      | 게시판 관리 페이지 조회                      |
+| GET  | /enrollForm.bo  | 게시판 작성 페이지 이동                      |
+| POST | /insertBoard.bo | 게시글 등록 처리                          |
+| GET  | /detail.bo      | 게시글 상세 조회                          |
+| GET  | /updateForm.bo  | 게시글 수정 페이지 이동                      |
+| GET  | /update.bo      | 게시글 수정 처리                          |
+| GET  | /delete.bo      | 게시글 삭제 처리                          |
+| GET  | /select.bo      | 게시글 조건 검색 (type, title, userId 기반) |
+<br/>
+
+### BuyController
+| 메서드  | 엔드포인트          | 설명                         |
+| ---- | -------------- | -------------------------- |
+| GET  | /buyDetail.erp | 특정 그룹 번호(gNo)의 구매 상세 조회 화면 |
+| POST | /mat.buy       | 재료 구매 신청 처리                |
+| GET  | /buyList.erp   | 전체 구매 목록 페이지 진입            |
+| GET  | /search.buy    | 검색 조건(날짜, 유저)으로 구매내역 조회    |
+| GET  | /buyAdd.erp    | 구매서 등록 페이지 진입 (재료 목록 조회)   |
+<br/>
+
+### CompanyController
+| 메서드 | 엔드포인트          | 설명                       |
+| --- | -------------- | ------------------------ |
+| GET | /company.erp   | 승인된 거래처 목록 페이지 진입        |
+| GET | /compAdmin.erp | 거래처 관리자 승인 대기 목록 페이지 진입  |
+| GET | /select.com    | 거래처 조건 검색 (회사명, 담당자명 기준) |
+| GET | /select.ad     | 거래처 관리자 페이지 조건 검색        |
+| GET | /delete.com    | 거래처 삭제 처리                |
+<br/>
+
+### EmployeeController
+| 메서드  | 엔드포인트                | 설명                          |
+| ---- | -------------------- | --------------------------- |
+| GET  | /employee.erp        | 인사관리 메인 페이지 진입              |
+| GET  | /empAdmin.erp        | 인사 관리자 메인 페이지 진입            |
+| GET  | /empList.erp         | 전체 사원 목록 조회                 |
+| GET  | /empAdminList.erp    | 관리자 페이지용 사원 목록 조회           |
+| GET  | /empDetail.erp       | 특정 사원(userId)의 상세 정보 페이지 진입 |
+| GET  | /empSearch.erp       | 사원 검색 (이름, 직무코드 기준)         |
+| GET  | /empAdminSearch.erp  | 관리자 페이지에서 사원 검색 (ID, 이름 기준) |
+| POST | /empDetailSearch.erp | 사원 정보 및 사진 수정 처리            |
+<br/>
+
+### ErpMainController
+| 메서드 | 엔드포인트     | 설명                                          |
+| --- | --------- | ------------------------------------------- |
+| GET | /home.erp | ERP 메인 대시보드 페이지 진입. 매출, 재고, 공지사항 등 주요 정보 로딩 |
+<br/>
+
+### HomeController
+| 메서드 | 엔드포인트 | 설명              |
+| --- | ----- | --------------- |
+| GET | /     | index 메인 페이지 진입 |
+<br/>
+
+### IncomeController
+| 메서드 | 엔드포인트       | 설명                                        |
+| --- | ----------- | ----------------------------------------- |
+| GET | /income.erp | 전체 매출 목록 페이지 진입 (총 매출, 매출 리스트, 페이지네이션 포함) |
+| GET | /search.in  | 검색 조건(타입, 기간, 거래처)으로 매출 리스트 및 총액 조회       |
+| GET | /detail.in  | 특정 그룹 번호(gno)의 매출 상세 내역 조회 화면             |
+<br/>
+
+### InventoryController
+| 메서드  | 엔드포인트                 | 설명                                   |
+| ---- | --------------------- | ------------------------------------ |
+| GET  | /inv.erp              | 재고관리 메인 페이지 진입 (제품/재료 수량, 탭별 리스트 포함) |
+| GET  | /materialList         | 전체 재료 목록 조회 (AJAX용)                  |
+| GET  | /productSearch.pro    | 제품 조건 검색 (카테고리, 제품번호, 제품명 등)         |
+| GET  | /insertProduct.pro    | 제품 등록 페이지 진입                         |
+| GET  | /updateView.pro      | 제품 수정 페이지 진입                         |
+| POST | /update.pro           | 제품 정보 수정 및 이미지, 레시피 정보 갱신            |
+| POST | /delete.pro           | 제품 삭제 처리                             |
+| POST | /insert.pro           | 제품 등록 처리 (파일 업로드 및 레시피 포함)           |
+| GET  | /getProductInfo       | 제품 번호(proNo) 기반 단일 제품 상세 정보 조회       |
+| GET  | /ingredientSearch.ing | 재료 조건 검색 (제품번호, 제품명 등)               |
+| GET  | /insert.ing           | 재료 등록 페이지 진입                         |
+| GET  | /updateView.ing      | 재료 수정 페이지 진입                         |
+| POST | /update.ing           | 재료 정보 수정 및 이미지 갱신                    |
+| POST | /delete.ing           | 재료 삭제 처리                             |
+| POST | /insert.ing           | 재료 등록 처리 (파일 업로드 포함)                 |
+<br/>
+
+### MemberController
+| 메서드  | 엔드포인트                   | 설명                              |
+| ---- | ----------------------- | ------------------------------- |
+| GET  | /loginForm.me           | 로그인 페이지 진입                      |
+| GET  | /signUpEnrollForm.me    | 회원가입 페이지 진입                     |
+| GET  | /logout.me              | 로그아웃 처리 (세션 종료 후 redirect)      |
+| GET  | /logoutSuccess.me       | 로그아웃 후 캐시 제거 및 로그인 페이지로 리다이렉트   |
+| POST | /signUp.me              | 회원가입 요청 처리                      |
+| POST | /login.me               | 로그인 처리 (비밀번호 일치 여부 확인)          |
+| GET  | /myPageDetail.me        | 마이페이지 진입 (개인정보 수정/탈퇴 선택 페이지)    |
+| GET  | /updateEnrollForm.me    | 개인정보 수정 페이지 진입                  |
+| POST | /upDate.me              | 개인정보 수정 처리 후 재로그인 요청            |
+| GET  | /updateDeleteSuccess.me | 개인정보 수정/탈퇴 후 알림 띄우고 로그인 페이지로 이동 |
+| GET  | /updatePwEnrollForm.me  | 비밀번호 변경 폼 진입                    |
+| POST | /updatePwd.me           | 비밀번호 변경 처리                      |
+| POST | /delete.me              | 회원 탈퇴 처리 (비밀번호 검증 후 탈퇴 처리)      |
+| GET  | /login.go               | 구글 로그인 처리 후 회원 존재 여부에 따라 분기 처리  |
+<br/>
+
+### ProductController
+| 메서드  | 엔드포인트       | 설명                                  |
+| ---- | ----------- | ----------------------------------- |
+| GET  | /prdc.erp   | 제작 페이지 진입 (제품 목록 조회 및 select 박스 출력) |
+| POST | /create.pro | 제품 제작 요청 처리 (재고 확인 및 생산 처리)         |
+<br/>
+
+### ProductListController
+| 메서드 | 엔드포인트            | 설명                                      |
+| --- | ---------------- | --------------------------------------- |
+| GET | /productList.crm | CRM 전체 상품 리스트 조회 (로그인 사용자 기준 장바구니 포함)   |
+| GET | /searchList.pro  | 키워드 기반 제품 검색 리스트 조회 (페이징 및 검색 로그 전달 포함) |
+<br/>
+
+### SaleController
+| 메서드 | 엔드포인트            | 설명                                        |
+| --- | ---------------- | ----------------------------------------- |
+| GET | /saleList.erp    | 전체 판매 목록 페이지 진입 (페이지네이션 포함)               |
+| GET | /saleDList.erp   | 특정 판매 그룹 번호(sNo)의 판매 상세 내역 조회 페이지 진입      |
+| GET | /buyAcc.erp      | 특정 판매 요청 승인 처리 (sNo 기준)                   |
+| GET | /buyRef.erp      | 특정 판매 요청 반려 처리 (sNo 기준)                   |
+| GET | /salSearList.erp | 검색 조건(시작일, 종료일, 거래처)으로 판매 리스트 조회 및 페이징 처리 |
+<br/>
+
+### ShoppingListController
+| 메서드  | 엔드포인트             | 설명                                                     |
+| ---- | ----------------- | ------------------------------------------------------ |
+| GET  | /shoppingList.crm | CRM 장바구니 페이지 진입 (상품 목록 + 유저 장바구니 조회)                   |
+| POST | /insert.io        | 장바구니에 담긴 상품 구매 처리 (재고 체크 → 그룹 생성 → 구매 내역 저장 → 장바구니 제거) |
+<br/>
+
 ## API 명세
-### USER_INFO (유저)
-| 메서드 | 엔드포인트        | 설명           |
-| ------ | ---------------- | -------------- |
-| GET | loginForm.me | 로그인 폼 |
-| GET | signUpEnrollForm.me | 회원가입 폼 |
-| GET | /api/members/teacher | 교사 생성 |
-
-
 ### APIBoardController(댓글 / 게시판)
 | 메서드  | 엔드포인트             | 설명                    |
 | ---- | ----------------- | --------------------- |
@@ -153,28 +280,39 @@ git clone https://github.com/didwlwd/diamelo
 | GET  | /api/board/reply  | 댓글 목록 조회 (postId)     |
 | GET  | /api/board/delete | 삭제할 댓글 정보 조회 (postId) |
 | POST | /api/board/delete | 댓글 삭제                 |
+<br/>
 
 ### APICompanyController (기업 승인 처리)
 | 메서드  | 엔드포인트               | 설명              |
 | ---- | ------------------- | --------------- |
 | POST | /api/company/commit | 기업 사용자 상태 승인 처리 |
 | POST | /api/company/return | 기업 사용자 상태 반려 처리 |
+<br/>
 
 ### APIConfigController (구글 로그인 설정)
 | 메서드 | 엔드포인트                    | 설명                               |
 | --- | ------------------------ | -------------------------------- |
 | GET | /api/config/google/login | 구글 로그인 clientId 및 redirectUri 반환 |
+<br/>
 
 ### APIEmployeeController (직원 관리)
 | 메서드  | 엔드포인트                       | 설명                           |
 | ---- | --------------------------- | ---------------------------- |
 | POST | /api/employee/empDelete.erp | 직원 상태 삭제/업데이트 처리 (userId 기반) |
+<br/>
 
 ### APIMemberController (아이디 중복 확인)
 | 메서드 | 엔드포인트          | 설명                           |
 | --- | -------------- | ---------------------------- |
 | GET | /api/member/id | 회원 아이디 중복 확인 (checkId param) |
+<br/>
 
+### APIProductionController (제품 상세 / 장바구니)
+| 메서드 | 엔드포인트                   | 설명                                |
+| --- | ----------------------- | --------------------------------- |
+| GET | /api/production/details | 제품 이미지, 재료, 최대 생산량 조회 (productNo) |
+| GET | /api/production/cart    | 장바구니 추가 / 삭제 (inCart, proNo)      |
+<br/>
 
 ## 팀원 소개
 
