@@ -3,7 +3,7 @@ Spring Framework를 활용한 사내 ERP 시스템입니다.
 
 ## 프로젝트 개요
 - 개발 기간: 2025-03-18 ~ 2025-04-14
-- 서비스 링크: [PPT]([https://mytodoapp.vercel.app](https://file.notion.so/f/f/a784fb59-18d5-4272-8e69-e604f8e7e590/bd033f9b-7ba2-4a80-9317-f70b7f73a88f/3%E1%84%8C%E1%85%A9_%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A1%E1%84%86%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9(%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD_%E1%84%8B%E1%85%AD%E1%86%BC).pdf?table=block&id=1ffa51a0-99f4-81c4-8b19-d46527dcf86d&spaceId=a784fb59-18d5-4272-8e69-e604f8e7e590&expirationTimestamp=1753776000000&signature=rd6heIv0CHO6muWUMil-x-i5m1PMvjxjr4uzoN-spRk&downloadName=3%E1%84%8C%E1%85%A9+%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A1%E1%84%86%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9%28%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD+%E1%84%8B%E1%85%AD%E1%86%BC%29.pdf))
+- 서비스 링크: .[PPT](./https://file.notion.so/f/f/a784fb59-18d5-4272-8e69-e604f8e7e590/bd033f9b-7ba2-4a80-9317-f70b7f73a88f/3%E1%84%8C%E1%85%A9_%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A1%E1%84%86%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9(%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD_%E1%84%8B%E1%85%AD%E1%86%BC).pdf?table=block&id=1ffa51a0-99f4-81c4-8b19-d46527dcf86d&spaceId=a784fb59-18d5-4272-8e69-e604f8e7e590&expirationTimestamp=1753776000000&signature=rd6heIv0CHO6muWUMil-x-i5m1PMvjxjr4uzoN-spRk&downloadName=3%E1%84%8C%E1%85%A9+%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A1%E1%84%86%E1%85%A6%E1%86%AF%E1%84%85%E1%85%A9%28%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD+%E1%84%8B%E1%85%AD%E1%86%BC%29.pdf)
 - 본 프로젝트의 구조를 더 자세히 알고 싶다면?
   - [백엔드 README](./BACK.md)
   - [프론트엔드 README](./FRONT.md)
