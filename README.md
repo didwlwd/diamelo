@@ -3,7 +3,7 @@ Spring Framework를 활용한 사내 ERP 시스템입니다.
 
 ## 프로젝트 개요
 - 개발 기간: 2025-03-18 ~ 2025-04-14
-- 참고 링크: .[PDF 링크](https://github.com/user-attachments/files/21478985/diamelo.ppt.pdf)
+- 참고 링크: [PDF 링크](https://github.com/user-attachments/files/21478985/diamelo.ppt.pdf)
 
 ## 기술 스택
 `Front-End` 
@@ -12,16 +12,16 @@ Spring Framework를 활용한 사내 ERP 시스템입니다.
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 <img src="https://img.shields.io/badge/ajax-0054A6?style=for-the-badge&logo=ajax&logoColor=white">
 <img src="https://img.shields.io/badge/jsp-007396?style=for-the-badge&logo=java&logoColor=white">
-
+/br
 `Back-end`
 <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
 <img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">
 <img src="https://img.shields.io/badge/mybatis-000000?style=for-the-badge&logo=mybatis&logoColor=white">
-
+/br
 `Infra / DevOps`
 <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
 <img src="https://img.shields.io/badge/apache tomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=white">
-
+/br
 `Communication / IDE`
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 <img src="https://img.shields.io/badge/trello-0052CC?style=for-the-badge&logo=trello&logoColor=white">
